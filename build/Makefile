@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-I.
 DEPS=main.o fonctions.o
 
-gameOfLife: clean $(DEPS)
+gameOfLife: clean $(DEPS) cleanObj
 	$(CC) -o main $(DEPS)
 
 main.o:
@@ -11,5 +11,8 @@ main.o:
 fonctions.o:
 	$(CC) -c -o fonctions.o ../src/fonctions.c $(CFLAGS)
 
+cleanObj:
+	rm *.o
+
 clean:
-	rm -rf *.o main
+	rm *.o main
