@@ -1,1 +1,1 @@
-#define MAXLENGTH 6
+#define MAXLENGTH 25
